@@ -1,0 +1,200 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+@font-face{
+    font-family: "Trash";
+    src:url("../assets/Trash___.ttf")
+}
+
+body{
+    background-color: black;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+img{
+    width:100%;
+}
+
+header{
+    height: 100vh;
+    background-image: url("../assets/fond.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav{
+   background-color: black;
+   position: relative;
+   z-index:3000;
+}
+
+ul{
+    width:80%;
+    margin: auto;
+}
+
+li{
+    width:15%;
+}
+
+a{
+    font-family: "Trash";
+    color: red;
+    font-size:1.5rem;
+    text-decoration: none;
+}
+
+header::after{
+    content:"";
+    background: linear-gradient(to top, black, transparent);
+    position:absolute;
+    width:100%;
+    height: 100%;
+    top:0;
+    left:0;
+    z-index:1000;
+}
+
+h1, h2{
+    font-family: 'Trash';
+    color:red;
+    width:50%;
+    font-size: 4rem;
+    margin:auto;
+    position: absolute;
+    bottom:10%;
+    left:50%;
+    transform: translateX(-50%);
+    z-index: 2000;
+    text-align: center;
+    letter-spacing: 10px;
+}
+
+h2{
+    font-size: 3rem;
+    position: static;
+    transform: unset;
+    text-align: right;
+    width: 100%;
+}
+
+#info{
+    height:100vh;
+    background-image: url(../assets/fondSang.jpg);
+    background-position: center;
+    background-size:cover;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#info::after{
+    content:"";
+    background: linear-gradient(to left, black, transparent);
+    position: absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    z-index:1000;
+}
+
+#info article{
+    width:30%;
+    height: 100%;
+    position: relative;
+    z-index:2000;
+    color: red;
+    font-family: "Trash";
+}
+
+article *{
+    margin:20px 0;
+}
+
+section:nth-of-type(2) > *{
+    width:40%;
+    text-align: left;
+}
+
+#band{
+    gap:100px;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+#band > div {
+    width:45%;
+    overflow: hidden;
+    position: relative;
+}
+
+#band h3{
+    color: red;
+    font-family: "Trash";
+    position: absolute;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:4rem;
+    background-color: rgba(0,0,0,0.6);
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    transform: translateY(100%);
+    transition: transform 500ms;
+}
+
+#band> div:hover h3{
+    transform: translateY(0);
+}
+
+#horizontal{
+    position: absolute;
+    top: 50%;
+    left:53%;
+    transform: translate(-50%,-50%);
+    color:red;
+    font-family: "Trash";
+    font-size:100px;
+}
+
+#horizontal img{
+    width:100px;
+}
+
+#vertical{
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    position: absolute;
+    top:53.5%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    font-size: 100px;
+    color: red;
+    font-family: "Trash";
+    font-size:100px;
+}
+#vertical span{
+    display: inline-block;
+    height: 100px;
+}
+
+legend{
+    color: red;
+    font-family: "Trash";
+    font-size:.7rem;
+    display: block;
+    margin: 10px 0;
+}
